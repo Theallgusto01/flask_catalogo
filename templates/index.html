@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+  <h1>Filmes</h1>
+
+  <table class="table table-s mt-5">
+
+    <tr>
+      <th>Id</th>
+      <th>Titulo</th>
+      <th>Gênero</th>
+      <th>Ano</th>
+    </tr>
+    {%for filme in filmes%}
+      <tr>
+        <td>{{filme.id}}</td>
+        <td>{{filme.titulo}}</td>
+        <td>{{filme.genero}}</td>
+        <td>{{filme.ano}}</td>
+      </tr>
+    {%endfor%}
+
+  </table>
+
+
+{%endblock%}
