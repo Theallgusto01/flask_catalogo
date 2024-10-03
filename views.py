@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template, url_for, request, redirect
-from app import db, Filmes
+from app import db
+from models import Filmes
+
 
 @app.route('/')
 def index():
@@ -23,3 +25,8 @@ def criar():
         db.session.add(filme)
         db.session.commit()
     return redirect(url_for('index'))
+
+@app.route('/filme/<int:id>')
+def view(id):
+    filme = db.session.execute(db.select(Filmes).filter_by(id=id)).scalars().first()
+    return render_template('edit.html', filme=filme)
