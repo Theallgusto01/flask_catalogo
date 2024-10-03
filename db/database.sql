@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE IF NOT EXISTS `DATABASE`    
 
 
@@ -12,7 +14,7 @@ CREATE TABLE Filmes(
 
 
 
-INSERT INTO `Filmes` (Título,Gênero,Ano)
+INSERT INTO `Filmes` (titulo,genero,ano)
 VALUES (
     'O Poderoso Chefão', 'Drama/Crime', '1972'
     'Star Wars: Uma Nova Esperança', 'Ficção Científica/Aventura', '1977'

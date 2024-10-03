@@ -3,7 +3,6 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session, sess
 import pymysql.cursors
 
 
-
 class Base(DeclarativeBase):
     pass
 
@@ -15,7 +14,7 @@ class Filmes(Base):
     ano: Mapped[int] = mapped_column()
 
 
-engine = create_engine("mysql+pymysql://root:1234@localhost:3306/MY_DATABASE")
+engine = create_engine("mysql+pymysql://root:1234@localhost:3306/DATABASE")
 Session = sessionmaker(engine)
 
 def add_filme(novo_filme):
@@ -40,9 +39,6 @@ def list_filmes():
 
 # add_filme(otro_filme)
 
-filmes = list_filmes()
-for filme in filmes:
-    print(f'{filme.titulo}')
 
 
     #novo_filme = Filmes(titulo='Túmulo dos Vagalumes', genero='Guerra/Drama', ano=1998)
