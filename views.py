@@ -21,10 +21,7 @@ def criar():
             titulo=request.form['titulo'],
             genero=request.form['genero'],
             ano=request.form['ano']
-        )
-        exist = db.session.execute(select(Filmes)).scalars.all()
-        if request.form['titulo'] in exist:
-            
+        )             
         db.session.add(filme)
         db.session.commit()
     return redirect(url_for('index'))
