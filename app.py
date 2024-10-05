@@ -7,7 +7,7 @@ app = Flask(__name__)
 class Base(DeclarativeBase):
     pass
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:1234@localhost:3306/DATABASE"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:1234@localhost:3306/MY_DATABASE"
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 

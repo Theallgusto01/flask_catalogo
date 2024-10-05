@@ -2,7 +2,7 @@
 {%block content%}
 <h1>{{title}}</h1>
 
-<form action="{{url_for('update')}}" method="post" >
+<form action="{{ url_for('update', id=filme.id) }}" method="post">
     <fieldset>
         <div class="form-group">
             <label for="titulo">Título</label>
