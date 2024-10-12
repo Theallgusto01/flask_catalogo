@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<form>
+    <div class="form-group mt-5">
+
+        <div id='title'>
+            <label for="titulo">Nome do Filme: </label>
+            <input class="form-control" type="text" id="titulo">
+        </div>
+        <div>
+            <label for='ano'>Ano de Lançamento: </label>
+            <input class="form-control" type="date" id="ano">
+        </div>
+
+        <div>
+            <label fo="genero">Gênero:</label>
+            <input class="form-control" type="text" id="genero">
+        <div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+ </form>
+{%endblock%}
